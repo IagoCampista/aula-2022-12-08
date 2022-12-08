@@ -85,6 +85,16 @@ describe('romanos', () => {
     //     //expectation
     //     expect (numeroRomanos).toEqual("IV");
     // });
+
+    it('deveria converter 6 para "VI"', () => {
+        //setup
+        const sut = new Romanos();
+        //action
+        const numeroRomanos = sut.converte(6); 
+        //expectation
+        expect (numeroRomanos).toEqual("VI");
+    });
+
     it('Testando erro', () => {
         //setup
         const sut = new Romanos();
