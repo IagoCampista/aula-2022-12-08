@@ -29,5 +29,45 @@ describe('romanos', () => {
         //expectation
         expect (numeroRomanos).toEqual("V");
     });
-
+    it('deveria converter 500 para "D"', () => {
+        //setup
+        const sut = new Romanos();
+        //action
+        const numeroRomanos = sut.converte(500); 
+        //expectation
+        expect (numeroRomanos).toEqual("D");
+    });
+    it('deveria converter 1000 para "M"', () => {
+        //setup
+        const sut = new Romanos();
+        //action
+        const numeroRomanos = sut.converte(1000); 
+        //expectation
+        expect (numeroRomanos).toEqual("M");
+    });
+    it('deveria converter 50 para "L"', () => {
+        //setup
+        const sut = new Romanos();
+        //action
+        const numeroRomanos = sut.converte(50); 
+        //expectation
+        expect (numeroRomanos).toEqual("L");
+    });
+    it('deveria converter 100 para "C"', () => {
+        //setup
+        const sut = new Romanos();
+        //action
+        const numeroRomanos = sut.converte(100); 
+        //expectation
+        expect (numeroRomanos).toEqual("C");
+    });
+    it('Testando erro', () => {
+        //setup
+        const sut = new Romanos();
+        //action        
+        //expectation
+        expect ( 
+            () => { sut.converte(-99) } 
+        ).toThrow('');
+    });
 })
