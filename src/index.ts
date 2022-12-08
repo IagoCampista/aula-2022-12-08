@@ -1,8 +1,5 @@
 import express, { Router } from "express"
-
 import { romanoController } from "./controller";
-
-
 
 const app = express()
 
