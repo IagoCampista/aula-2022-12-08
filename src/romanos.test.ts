@@ -1,3 +1,5 @@
+import { Romanos } from "./romanos";
+
 
 describe('romanos', () => {
 
@@ -8,6 +10,15 @@ describe('romanos', () => {
         const numeroRomanos = sut.converte(1); 
         //expectation
         expect (numeroRomanos).toEqual("I");
+    });
+
+    it('deveria converter 10 para "X"', () => {
+        //setup
+        const sut = new Romanos();
+        //action
+        const numeroRomanos = sut.converte(10); 
+        //expectation
+        expect (numeroRomanos).toEqual("X");
     });
 
 })
