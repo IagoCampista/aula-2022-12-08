@@ -73,18 +73,18 @@ describe('romanos', () => {
         //setup
         const sut = new Romanos();
         //action
-        const numeroRomanos = sut.converte(2); 
+        const numeroRomanos = sut.converte(3); 
         //expectation
-        expect (numeroRomanos).toEqual("II");
+        expect (numeroRomanos).toEqual("III");
     });
-    it('deveria converter 4 para "IV"', () => {
-        //setup
-        const sut = new Romanos();
-        //action
-        const numeroRomanos = sut.converte(2); 
-        //expectation
-        expect (numeroRomanos).toEqual("II");
-    });
+    // it('deveria converter 4 para "IV"', () => {
+    //     //setup
+    //     const sut = new Romanos();
+    //     //action
+    //     const numeroRomanos = sut.converte(4); 
+    //     //expectation
+    //     expect (numeroRomanos).toEqual("IV");
+    // });
     it('Testando erro', () => {
         //setup
         const sut = new Romanos();

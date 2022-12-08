@@ -21,18 +21,24 @@ class Romanos {
     ]
 
     converte(arabico: number):string{
-        if(arabico<1)throw new Error("arabico desconhecido");
         
-        const indice = this.arabicos.indexOf(arabico);
-        if(indice == -1){
-            if(arabico == 2)
-            return 'II';
-            else if (arabico== 3)
-            return 'III';
-            else
-            return 'IV';
+        const posicao_encontrada = this.arabicos.indexOf(arabico);
+        if(posicao_encontrada >= 0){
+            return this.romanos[posicao_encontrada];
+        } else {
+            const posicao_encontrada2 = this.arabicos.indexOf(arabico-1);
+            if (posicao_encontrada2 >= 0) {
+                // ok
+                return this.romanos[posicao_encontrada2]+"I";
+            } else {
+                const posicao_encontrada3 = this.arabicos.indexOf(arabico-2);
+                if (posicao_encontrada3 >= 0) {
+                    // ok
+                    return this.romanos[posicao_encontrada3]+"II";
+                }
+            }
         }
-        else return this.romanos[indice];
+        throw new Error("arabico desconhecido");
     } 
 }
 
