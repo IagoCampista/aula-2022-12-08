@@ -61,6 +61,30 @@ describe('romanos', () => {
         //expectation
         expect (numeroRomanos).toEqual("C");
     });
+    it('deveria converter 2 para "II"', () => {
+        //setup
+        const sut = new Romanos();
+        //action
+        const numeroRomanos = sut.converte(2); 
+        //expectation
+        expect (numeroRomanos).toEqual("II");
+    });
+    it('deveria converter 3 para "III"', () => {
+        //setup
+        const sut = new Romanos();
+        //action
+        const numeroRomanos = sut.converte(2); 
+        //expectation
+        expect (numeroRomanos).toEqual("II");
+    });
+    it('deveria converter 4 para "IV"', () => {
+        //setup
+        const sut = new Romanos();
+        //action
+        const numeroRomanos = sut.converte(2); 
+        //expectation
+        expect (numeroRomanos).toEqual("II");
+    });
     it('Testando erro', () => {
         //setup
         const sut = new Romanos();
