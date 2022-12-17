@@ -33,13 +33,23 @@ class Romanos {
     ]
 
     converte(arabico: number):string{ 
-        const posicao_encontrada = this.arabicos.indexOf(arabico);
-        if(posicao_encontrada >= 0){
-            return this.romanos[posicao_encontrada]
-        } else {
-            return 'hj nao'
+        let result = '';
+        let i=0;
+        for (i=0; i<14; i++){
+            if(arabico==this.arabicos[i]){
+                // i=0;
+                result = result +this.romanos[i]
+            }
+            
         }
-        throw new Error("arabico desconhecido");
+        return result;
+        // const posicao_encontrada = this.arabicos.indexOf(arabico);
+        // if(posicao_encontrada >= 0){
+        //     return this.romanos[posicao_encontrada]
+        // } else {
+        //     return 'hj nao'
+        // }
+        // throw new Error("arabico desconhecido");
     } 
 }
 
