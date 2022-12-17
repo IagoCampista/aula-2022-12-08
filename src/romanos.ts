@@ -2,26 +2,52 @@
 class Romanos {
     private arabicos = [
         1,
+        4,
         5,
+        9,
         10,
+        40,
         50,
+        90,
         100,
+        400,
         500,
+        900,
         1000
     ]
     
     private romanos = [
         'I',
+        'IV',
         'V',
+        'IX',
         'X',
+        'XL',
         'L',
+        'XC',
         'C',
+        'CD',
         'D',
+        'CM',
         'M'
     ]
 
-    converte(arabico: number):string{
-        
+    converte(arabico: number):string{ 
+        const posicao_encontrada = this.arabicos.indexOf(arabico);
+        if(posicao_encontrada >= 0){
+            return this.romanos[posicao_encontrada]
+        } else {
+            return 'hj nao'
+        }
+        throw new Error("arabico desconhecido");
+    } 
+}
+
+export {Romanos}
+
+
+/*
+converte(arabico: number):string{ 
         const posicao_encontrada = this.arabicos.indexOf(arabico);
         if(posicao_encontrada >= 0){
             return this.romanos[posicao_encontrada];
@@ -40,6 +66,4 @@ class Romanos {
         }
         throw new Error("arabico desconhecido");
     } 
-}
-
-export {Romanos}
+*/

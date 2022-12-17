@@ -2,8 +2,25 @@ import { Romanos } from "./romanos";
 
 
 describe('romanos', () => {
+it('so pra testar o config', () => {
+        //setup
+        const sut = new Romanos();
+        //action
+        const numeroRomanos = sut.converte(11); 
+        //expectation
+        expect (numeroRomanos).toEqual("XI");
+    });
+    
+})
 
-    it('deveria converter 1 para "I"', () => {
+
+
+
+
+// Testes feitos pelo professor
+
+/*
+it('deveria converter 1 para "I"', () => {
         //setup
         const sut = new Romanos();
         //action
@@ -104,4 +121,4 @@ describe('romanos', () => {
             () => { sut.converte(-99) } 
         ).toThrow('');
     });
-})
+*/
